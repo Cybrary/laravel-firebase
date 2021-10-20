@@ -42,7 +42,15 @@
         },
         "laravel": {
             "providers": [
-                "Kreait\\Laravel\\Firebase\\ServiceProvider"
+                "Kreait\\Laravel\\Firebase\\ServiceProvider",
+                "Kreait\\Laravel\\Firebase\\AuthServiceProvider",
+                "Kreait\\Laravel\\Firebase\\IdentityPlatformServiceProvider",
+                "Kreait\\Laravel\\Firebase\\DatabaseServiceProvider",
+                "Kreait\\Laravel\\Firebase\\DynamicLinksServiceProvider",
+                "Kreait\\Laravel\\Firebase\\FirestoreServiceProvider",
+                "Kreait\\Laravel\\Firebase\\MessagingServiceProvider",
+                "Kreait\\Laravel\\Firebase\\RemoteConfigServiceProvider",
+                "Kreait\\Laravel\\Firebase\\StorageProvider"
             ],
             "aliases": {
                 "Firebase": "Kreait\\Laravel\\Firebase\\Facades\\Firebase",
