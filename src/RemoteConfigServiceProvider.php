@@ -9,7 +9,7 @@ use Kreait\Firebase;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-final class RemoteConfigPlatformProvider extends ServiceProvider implements DeferrableProvider
+final class RemoteConfigServiceProvider extends ServiceProvider implements DeferrableProvider
 {
 
     public function register()

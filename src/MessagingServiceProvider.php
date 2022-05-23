@@ -9,7 +9,7 @@ use Kreait\Firebase;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-final class IdentityPlatformProvider extends ServiceProvider implements DeferrableProvider
+final class MessagingServiceProvider extends ServiceProvider implements DeferrableProvider
 {
 
     public function register()
