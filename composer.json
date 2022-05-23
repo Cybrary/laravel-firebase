@@ -50,7 +50,7 @@
                 "Kreait\\Laravel\\Firebase\\FirestoreServiceProvider",
                 "Kreait\\Laravel\\Firebase\\MessagingServiceProvider",
                 "Kreait\\Laravel\\Firebase\\RemoteConfigServiceProvider",
-                "Kreait\\Laravel\\Firebase\\StorageProvider"
+                "Kreait\\Laravel\\Firebase\\StorageServiceProvider"
             ],
             "aliases": {
                 "Firebase": "Kreait\\Laravel\\Firebase\\Facades\\Firebase",
