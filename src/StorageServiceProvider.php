@@ -9,6 +9,7 @@ use Kreait\Firebase;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
+
 final class StoragePlatformProvider extends ServiceProvider implements DeferrableProvider
 {
 
