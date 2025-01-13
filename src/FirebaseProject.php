@@ -29,13 +29,12 @@ class FirebaseProject
     protected ?DynamicLinks $dynamicLinks = null;
 
     /** @var \Kreait\Firebase\Contract\IdentityPlatform|null */
-    protected $identityPlatform;
+    protected ?IdentityPlatform $identityPlatform;
 
     /** @var \Kreait\Firebase\Contract\Messaging|null */
-    protected $messaging;
-    protected ?Firestore $firestore = null;
-
     protected ?Messaging $messaging = null;
+
+    protected ?Firestore $firestore = null;   
 
     protected ?RemoteConfig $remoteConfig = null;
 
@@ -65,7 +64,7 @@ class FirebaseProject
         return $this->auth;
     }
 
-    public function identityPlatform(): Firebase\IdentityPlatform
+    public function identityPlatform(): IdentityPlatform
     {
         if (!$this->identityPlatform) {
             $this->identityPlatform = $this->factory->createIdentityPlatform();
