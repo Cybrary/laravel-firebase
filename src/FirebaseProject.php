@@ -8,6 +8,7 @@ use Kreait\Firebase\Contract\AppCheck;
 use Kreait\Firebase\Contract\Auth;
 use Kreait\Firebase\Contract\Database;
 use Kreait\Firebase\Contract\DynamicLinks;
+use Kreait\Firebase\Contract\IdentityPlatform;
 use Kreait\Firebase\Contract\Firestore;
 use Kreait\Firebase\Contract\Messaging;
 use Kreait\Firebase\Contract\RemoteConfig;
@@ -29,7 +30,7 @@ class FirebaseProject
     protected ?DynamicLinks $dynamicLinks = null;
 
     /** @var \Kreait\Firebase\Contract\IdentityPlatform|null */
-    protected ?IdentityPlatform $identityPlatform;
+    protected ?IdentityPlatform $identityPlatform = null;
 
     /** @var \Kreait\Firebase\Contract\Messaging|null */
     protected ?Messaging $messaging = null;
