@@ -12,6 +12,7 @@ use Kreait\Firebase\Contract\Firestore;
 use Kreait\Firebase\Contract\Messaging;
 use Kreait\Firebase\Contract\RemoteConfig;
 use Kreait\Firebase\Contract\Storage;
+use Kreait\Firebase\Contract\IdentityPlatform;
 use Kreait\Firebase\Factory;
 
 class FirebaseProject
@@ -28,10 +29,8 @@ class FirebaseProject
 
     protected ?DynamicLinks $dynamicLinks = null;
 
-    /** @var \Kreait\Firebase\Contract\IdentityPlatform|null */
-    protected ?IdentityPlatform $identityPlatform;
+    protected ?IdentityPlatform $identityPlatform = null;
 
-    /** @var \Kreait\Firebase\Contract\Messaging|null */
     protected ?Messaging $messaging = null;
 
     protected ?Firestore $firestore = null;   

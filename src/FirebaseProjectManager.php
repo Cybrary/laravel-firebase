@@ -99,7 +99,7 @@ class FirebaseProjectManager
 
         if ($config['debug'] ?? false) {
             $logger = $this->app->make('log')->channel($logChannel ?? null);
-            $factory = $factory->withEnabledDebug($logger);
+            $factory = $factory->withHttpDebugLogger($logger);
         }
 
         if ($cacheStore = $config['cache_store'] ?? null) {
