@@ -53,11 +53,9 @@ final class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->singleton(Firebase\Contract\RemoteConfig::class, static fn (Container $app) => $app->make(FirebaseProjectManager::class)->project()->remoteConfig());
         $this->app->alias(Firebase\Contract\RemoteConfig::class, 'firebase.remote_config');
 
+        $this->app->singleton(Firebase\Contract\IdentityPlatform::class, static fn (Container $app) => $app->make(FirebaseProjectManager::class)->project()->identityPlatform());
+        $this->app->alias(Firebase\Contract\IdentityPlatform::class, 'firebase.identity_platform');
 
-        $this->app->singleton(Firebase\IdentityPlatform::class, static function (Container $app) {
-            return $app->make(FirebaseProjectManager::class)->project()->identityPlatform();
-        });
-        $this->app->alias(Firebase\IdentityPlatform::class, 'firebase.identity_platform');
         $this->app->singleton(Firebase\Contract\Storage::class, static fn (Container $app) => $app->make(FirebaseProjectManager::class)->project()->storage());
         $this->app->alias(Firebase\Contract\Storage::class, 'firebase.storage');
     }
